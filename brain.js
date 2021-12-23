@@ -2,8 +2,10 @@ window.onload = function(){
 
     var seconds = 00;
     var tens = 00;
+    var minutes = 00;
     var appendTens = document.getElementById("tens")
     var appendSeconds = document.getElementById("seconds")
+    var appendMinutes = document.getElementById("minutes")
     var buttonStart = document.getElementById("startButton");
     var buttonStop = document.getElementById("pauseButton");
     var markButton = document.getElementById("markButton");
@@ -44,6 +46,13 @@ function startTimer(){
         }
         if (seconds>0){
             appendSeconds.innerHTML = seconds;
+        }
+        if (seconds>59){
+            console.log("minutes");
+            minutes++;
+            appendMinutes.innerHTML = "0" + minutes;
+            seconds = 0
+            appendSeconds.innerHTML = "00" + 0;
         }
     }
 
