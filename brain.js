@@ -25,8 +25,10 @@ resetButton.onclick = function(){
     clearInterval(Interval);
     tens = "00";
     seconds = "00";
+    minutes = "00";
     appendTens.innerHTML = tens;
     appendSeconds.innerHTML = seconds;
+    appendMinutes.innerHTML = minutes;
 }
 
 function startTimer(){
@@ -44,7 +46,10 @@ function startTimer(){
             tens = 0
             appendTens.innerHTML="0"+ 0;
         }
-        if (seconds>0){
+        if (seconds <= 9 & seconds > 1){
+            appendSeconds.innerHTML = "0" + seconds;
+        }
+        if (seconds > 9){
             appendSeconds.innerHTML = seconds;
         }
         if (seconds>59){
@@ -52,7 +57,7 @@ function startTimer(){
             minutes++;
             appendMinutes.innerHTML = "0" + minutes;
             seconds = 0
-            appendSeconds.innerHTML = "00" + 0;
+            appendSeconds.innerHTML = "0" + 0;
         }
     }
 
