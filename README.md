@@ -1,2 +1,2 @@
 # Stopwatch
- Projeto de treino em front-end da criação de um cronômetro com marcação de tempo salva
+ Projeto de treino em front-end da criação de um cronômetro com marcação de tempo salva utilizando html,css e javascript *ainda em desenvolvimento*
